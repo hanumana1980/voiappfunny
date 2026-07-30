@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head><meta charset="utf-8"><title>TikTok Callback</title>
+<style>body{font-family:system-ui;max-width:640px;margin:60px auto;padding:0 16px}
+code{display:block;background:#f4f4f5;padding:16px;border-radius:8px;word-break:break-all;font-size:15px}
+button{margin-top:12px;padding:10px 16px;border:0;border-radius:8px;background:#111;color:#fff;cursor:pointer}</style>
+</head>
+<body>
+<h2>TikTok Authorization Code</h2>
+<p>Copy đoạn code dưới đây rồi dán cho bot để đổi lấy token:</p>
+<code id="c">—</code>
+<button onclick="navigator.clipboard.writeText(document.getElementById('c').textContent)">Copy code</button>
+<script>
+const p=new URLSearchParams(location.search);
+document.getElementById('c').textContent=p.get('code')||'(chưa có code — mở trang này qua link authorize của TikTok)';
+</script>
+</body></html>
